@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         recyclerView = findViewById(R.id.recyclerView);
     }
 
+
     @Override
     public void onItemClicked(int position, String s) {
         Intent openVideo = new Intent(Intent.ACTION_VIEW, Uri.parse(s));
