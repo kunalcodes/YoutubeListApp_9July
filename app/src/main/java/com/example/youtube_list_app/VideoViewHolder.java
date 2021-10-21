@@ -24,6 +24,7 @@ public class VideoViewHolder extends RecyclerView.ViewHolder {
         mCvCardView = itemView.findViewById(R.id.cvCardView);
     }
 
+    //setting the data and passing the url to activity on click
     public void setData(String s) {
         mTvVideoLink.setText(s);
         mCvCardView.setOnClickListener(new View.OnClickListener() {
