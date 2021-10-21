@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         setRecyclerViewAdapter();
     }
 
+
     private void setRecyclerViewAdapter() {
         VideoAdapter videoAdapter = new VideoAdapter(videoList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -31,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         recyclerView.setLayoutManager(linearLayoutManager);
     }
 
+    /* generating dummy list for recycler view
+    if we do this step after setting the adapter, we have to call
+    notify dataset changed method
+     */
     private void buildRecyclerViewData() {
         for (int i=0; i<10; i++){
             videoList.add("https://www.youtube.com/watch?v=LIF5BnugxYM");
@@ -42,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     }
 
 
+    /* interface method called form view holder with the link url and opened through
+    implicit intent
+    */
     @Override
     public void onItemClicked(int position, String s) {
         Intent openVideo = new Intent(Intent.ACTION_VIEW, Uri.parse(s));
