@@ -8,4 +8,5 @@ public interface ItemClickListener {
     and implemented in the activity
      */
     void onItemClicked(int position, String s);
+
 }
