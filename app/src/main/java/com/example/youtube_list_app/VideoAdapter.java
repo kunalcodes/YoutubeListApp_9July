@@ -15,7 +15,6 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
     private ArrayList<String> videoList;
     private ItemClickListener itemClickListener;
 
-
     public VideoAdapter(ArrayList<String> videoArrayList, ItemClickListener itemClickListener){
         this.itemClickListener = itemClickListener;
         this.videoList = videoArrayList;
