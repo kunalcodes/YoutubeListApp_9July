@@ -20,6 +20,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
         this.videoList = videoArrayList;
     }
 
+
     @NonNull
     @Override
     public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
